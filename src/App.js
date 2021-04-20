@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button, DatePicker } from 'antd';
 
-function App() {
+
+function App(props) {
+  const { onHello } = props;
+
   return (
-    <div className="App">
+    <div className="App" onClick={onHello}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,6 +21,8 @@ function App() {
         >
           Learn React
         </a>
+          <Button type="primary">PRESS ME</Button>
+          <DatePicker placeholder="select date" />
       </header>
     </div>
   );
